@@ -4,6 +4,26 @@ var bodyParse = require("body-parser");
 var morgan = require("morgan");
 var app = express();
 const PORT = process.env.port || 3000;
+var server = require("http").createServer(app);
+var io = require("socket.io").listen(server);
+users = [];
+connections = [];
+
+server.listen(PORT);
+
+io.sockets.on("connection", function (socket) {
+    connections.push(socket);
+    console.log("Connected %s sockets connected", connections.length);
+
+    socket.on("disconnect", function (data) {
+        connections.splice(connections.indexOf(socket), 1);
+        console.log("Disconnected %s sockets connected", connections.length);
+    });
+
+})
+
+
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -26,9 +46,7 @@ app.get("/code", function (req, res) {
     res.render("code");
 });
 
-app.listen(PORT, function () {
 
-});
 
 
 

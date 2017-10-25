@@ -12,23 +12,20 @@ const PORT = process.env.port || 3000;
 //set for random url generator
 shortid36.characters("0123456789ABCDEFGHIJKLMNPOQRSTUVWXYZ");
 
-
+app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({extended:false}));
 
-app.use(express.static(path.join(__dirname, "public")));
+
 app.use(morgan("short"));
 
 
 
 app.get("/", function (req, res) {
-   console.log(shortid36.generate());
-   res.render("index", {
-       title: "My Express"
-   });
+   res.render("index");
 });
 
 app.get("/code", function (req, res) {

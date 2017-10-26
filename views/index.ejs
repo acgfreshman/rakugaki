@@ -1,75 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Enable Boostrap -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Link to personal style sheet -->
-    <link rel="stylesheet" href="/stylesheets/index.css">
-    <!-- Link to font -->
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <!-- link to font Awesome -->
-    <script src="https://use.fontawesome.com/6d2e3cecf1.js"></script>
-</head>
-<body>
-<!-- Blog Navbar -->
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Navbar header-->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav" style="color:white;">
-                Menu <i class="fa fa-bars"></i>
-            </button>
-            <div class="navbar-brand">Title</div>
-        </div>
-        <div class="collapse navbar-collapse" id="mynav">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Home -->
-                <li class="active"><a href="#"><i class="fa fa-home"></i>  Home</a></li>
-                <!-- Login -->
-                <li class="dropdown"><a href="#"><i class="fa fa-sign-in"></i>  Login</a></li>
-                <!-- Register -->
-                <li class="dropdown"><a href="#contact"><i class="fa fa-envelope"></i>  Register</a></li>
-                <!-- Contact -->
-                <li class="dropdown"><a href="#contact"><i class="fa fa-envelope"></i>  Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<footer class="footer">
-    <!-- Link -->
-    <div class="container text-center" >
-        <a href="#top" title="Top">
-            <i class="fa fa-arrow-up"></i>
-        </a>
-        <br/>
-        <span>Back to Top</span>
-        <div class="row" style="margin-top:15px">
-            <div class="col-md-4">
-                <span class="copyright">Copyright &copy; Muchen Liu. 2017</span>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline text-center">
-                    <li>
-                        <a href="#"><i class="fa fa-linkedin-square social" style="font-size:40px;"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-facebook-square social" style="font-size:40px;"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-github-square social" style="font-size:40px;"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<% include ./parts/nav.ejs%>
+<!--body parts -->
+<div class="container profile">
+    <h3>help</h3>
 
-</footer>
+</div>
 
-</body>
-</html>
+<% include ./parts/footer.ejs%>

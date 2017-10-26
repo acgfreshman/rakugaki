@@ -26,16 +26,6 @@ header{
     padding-top: 70px;
 }
 
-footer .fa-arrow-up {
-    font-size: 15px;
-    margin-bottom: 15px;
-    color: #EB6536;
-}
-
-footer .fa-linkedin-square, .fa-facebook-square, .fa-github-square {
-    color: #EB6536;
-}
-
 .col-xs-8 {
     font-size: 15px;
     margin: 25px 0;
@@ -45,26 +35,12 @@ footer .fa-linkedin-square, .fa-facebook-square, .fa-github-square {
     margin: 25px 0;
 }
 
-.copyright{
-    line-height:40px;
-    text-transform:uppercase;
-    text-transform:none
-}
-
-.logo {
-      font-size: 180px;
-  }
-
 @media screen and (max-width: 480px) {
     .logo {
         font-size: 150px;
         margin-top: 15px;
     }
   }
-
-.footer {
-    background-color: rgb(248, 248, 248);
-}
 
 .content {
     padding-bottom: 70px;

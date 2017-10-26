@@ -6,6 +6,14 @@ var shortid36 = require("shortid36");
 var app = express();
 var server = require("http").Server(app);
 var io = require("socket.io").listen(server);
+
+//export routes files
+var index = require('./routes/index');
+
+
+//use routes files
+app.use('/',index);
+
 const PORT = process.env.port || 3000;
 
 
@@ -18,15 +26,9 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({extended:false}));
-
-
 app.use(morgan("short"));
 
 
-
-app.get("/", function (req, res) {
-   res.render("index");
-});
 
 app.get("/code", function (req, res) {
     res.render("code");

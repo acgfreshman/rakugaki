@@ -28,10 +28,12 @@ app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(morgan("short"));
 
+app.use("/new", function (req,res) {
+    //generate a random url and redirect
+    var url = '/' + shortid36.generate();
+    //add url to database as UID
 
-
-app.get("/code", function (req, res) {
-    res.render("code");
+    res.redirect(url);
 });
 
 app.listen(PORT, function () {

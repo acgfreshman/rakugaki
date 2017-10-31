@@ -28,7 +28,6 @@ router.get("/", function (req, res, next) {
     //get connection from pool
     pool.getConnection(function (err, connection) {
         //get data from front end
-        var param = req.query || req.params;
         connection.query(userSql.selectAll, [], function (err, result) {
             if(result){
                 result = {
